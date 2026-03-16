@@ -3,17 +3,18 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { databaseConfig, redisConfig } from './config';
+import { databaseConfig, redisConfig, reservationConfig } from './config';
 import { ProductModule } from './modules/product/product.module';
 import { StockModule } from './modules/stock/stock.module';
 import { WarehouseModule } from './modules/warehouse/warehouse.module';
+import { ReservationModule } from './modules/reservation/reservation.module';
 import { RedisModule } from './redis/redis.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      load: [databaseConfig, redisConfig],
+      load: [databaseConfig, redisConfig, reservationConfig],
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
@@ -33,6 +34,7 @@ import { RedisModule } from './redis/redis.module';
     ProductModule,
     WarehouseModule,
     StockModule,
+    ReservationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
