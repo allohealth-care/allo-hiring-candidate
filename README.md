@@ -2,7 +2,7 @@
 
 This is a small NestJS-based inventory API used as part of a coding assessment. The codebase includes functionality for managing products, warehouses, and stock levels.
 
-During the interview process, you will be asked to extend the application according to requirements provided by the interviewer. You are expected to review the codebase and have the application fully set up and running before the interview begins.
+During the interview process, you will be asked to extend the application according to requirements provided by the interviewer. You are expected to review the codebase and have the application fully set up and running before the interview begins in IDE with AI capabilities (`VS Code/Cursor with Copilot, Claude`).
 
 ## Quick start: application setup
 
